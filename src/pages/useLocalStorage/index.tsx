@@ -1,7 +1,7 @@
 import { FC } from 'react'
 import useLocalStorage from '../../lib/hooks/useLocalStorage'
 
-const LocalStorage: FC = () => {
+const UseLocalStorage: FC = () => {
   const [value, setValue] = useLocalStorage('test', 0)
 
   return (
@@ -15,4 +15,4 @@ const LocalStorage: FC = () => {
   )
 }
 
-export default LocalStorage
+export default UseLocalStorage
