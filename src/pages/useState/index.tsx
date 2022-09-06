@@ -1,5 +1,4 @@
-import { useState } from 'react'
-import type { FC } from 'react'
+import { FC, useState } from 'react'
 
 const UseState: FC = () => {
   const [count, setCount] = useState(0)

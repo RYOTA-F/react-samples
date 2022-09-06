@@ -1,16 +1,10 @@
 import { FC } from 'react'
 import useSWR from 'swr'
 import fetcher from '../../lib/fetch'
-
-type Jsonplaceholder = {
-  userId: number
-  id: number
-  title: string
-  body: string
-}[]
+import { Jsonplaceholder } from '../../types/jsonplaceholder'
 
 const Swr: FC = () => {
-  const { data, error } = useSWR<Jsonplaceholder>(
+  const { data, error } = useSWR<Jsonplaceholder[]>(
     'https://jsonplaceholder.typicode.com/posts',
     fetcher
   )
