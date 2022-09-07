@@ -1,6 +1,7 @@
 import { FC } from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Home from './pages/home'
+import NotFound from './pages/notFound'
 import UseLocalStorage from './pages/useLocalStorage'
 import Swr from './pages/swr'
 import UseState from './pages/useState'
@@ -17,6 +18,7 @@ const App: FC = () => {
         <Route path="/use_state" element={<UseState />} />
         <Route path="/use_effect" element={<UseEffect />} />
         <Route path="/use_context" element={<UseContext />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
   )
