@@ -7,6 +7,7 @@ import Swr from './pages/swr'
 import UseState from './pages/useState'
 import UseEffect from './pages/useEffect'
 import UseContext from './pages/useContext'
+import UseReducer from './pages/useReducer'
 
 const App: FC = () => {
   return (
@@ -18,6 +19,7 @@ const App: FC = () => {
         <Route path="/use_state" element={<UseState />} />
         <Route path="/use_effect" element={<UseEffect />} />
         <Route path="/use_context" element={<UseContext />} />
+        <Route path="/use_reducer" element={<UseReducer />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
