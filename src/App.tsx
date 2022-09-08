@@ -9,6 +9,7 @@ import UseEffect from './pages/useEffect'
 import UseContext from './pages/useContext'
 import UseReducer from './pages/useReducer'
 import UseRef from './pages/useRef'
+import Redux from './pages/redux'
 import ReduxToolkit from './pages/reduxToolkit'
 
 const App: FC = () => {
@@ -23,7 +24,8 @@ const App: FC = () => {
         <Route path="/use_context" element={<UseContext />} />
         <Route path="/use_reducer" element={<UseReducer />} />
         <Route path="/use_callback" element={<UseRef />} />
-        <Route path="/redux" element={<ReduxToolkit />} />
+        <Route path="/redux_toolkit" element={<ReduxToolkit />} />
+        <Route path="/redux" element={<Redux />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>

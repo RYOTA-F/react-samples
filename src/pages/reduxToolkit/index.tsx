@@ -1,6 +1,6 @@
 import { FC } from 'react'
 import ReduxToolkitChild from './child'
-import { store } from './store'
+import { store } from './counter.store'
 import { Provider } from 'react-redux'
 
 const ReduxToolkit: FC = () => {
@@ -8,6 +8,7 @@ const ReduxToolkit: FC = () => {
     <>
       <Provider store={store}>
         <h1>ReduxToolkit</h1>
+        <hr />
         <ReduxToolkitChild />
       </Provider>
     </>
