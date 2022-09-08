@@ -12,6 +12,7 @@ const Swr: FC = () => {
   return (
     <>
       <h1>Swr</h1>
+      {error && <div>Error: {error}</div>}
       {data?.map((v, i) => (
         <div key={i}>
           userId: {v.userId}
