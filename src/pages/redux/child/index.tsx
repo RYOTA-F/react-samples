@@ -6,7 +6,7 @@ import type { RootState } from '../counter.store'
 
 const ReduxChild: FC = () => {
   const dispatch = useDispatch()
-  const { count } = useSelector((state: RootState) => state.bank)
+  const { count } = useSelector((state: RootState) => state.counter)
 
   const handleClickIncrement = useCallback(() => {
     dispatch(incrementCounter(1))
