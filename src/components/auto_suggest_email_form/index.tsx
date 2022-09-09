@@ -22,12 +22,23 @@ const AutoSuggestEmailForm: FC<AutoSuggestEmailForm> = ({
   const domains = suggestionDataSet.map((v) => '@' + v)
 
   /**
+   * サジェストデータを変換
+   */
+  const convertSuggestion = (inputValue: string, domain: string) => {
+    const account = inputValue.match('@')
+      ? inputValue.substring(0, inputValue.indexOf('@'))
+      : inputValue
+
+    return account + domain
+  }
+
+  /**
    * サジェストデータを読み込み
    */
   const onSuggestionsFetchRequested = ({ value }: { value: string }) => {
     setSuggestions(
-      domains.map((suggestionValue) => {
-        return value + suggestionValue
+      domains.map((domain) => {
+        return convertSuggestion(value, domain)
       })
     )
   }

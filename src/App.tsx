@@ -11,7 +11,7 @@ import UseReducer from './pages/useReducer'
 import UseRef from './pages/useRef'
 import Redux from './pages/redux'
 import ReduxToolkit from './pages/reduxToolkit'
-import AutoSuggest from './pages/auto_suggest'
+import AutoSuggest from './pages/autoSuggest'
 
 const App: FC = () => {
   return (
