@@ -1,0 +1,91 @@
+import { FC, BaseSyntheticEvent, Dispatch, SetStateAction } from 'react'
+import AutoSuggest from 'react-autosuggest'
+import SuggestStyle from './style'
+
+export type AutoSuggestEmailForm = {
+  inputValue: string
+  setInputValue: Dispatch<SetStateAction<string>>
+  suggestions: string[]
+  setSuggestions: Dispatch<SetStateAction<string[]>>
+  suggestionDataSet: string[]
+  placeholderText: string
+}
+
+const AutoSuggestEmailForm: FC<AutoSuggestEmailForm> = ({
+  inputValue,
+  setInputValue,
+  suggestions,
+  setSuggestions,
+  suggestionDataSet,
+  placeholderText,
+}) => {
+  const domains = suggestionDataSet.map((v) => '@' + v)
+
+  /**
+   * サジェストデータを読み込み
+   */
+  const onSuggestionsFetchRequested = ({ value }: { value: string }) => {
+    setSuggestions(
+      domains.map((suggestionValue) => {
+        return value + suggestionValue
+      })
+    )
+  }
+
+  /**
+   * サジェストデータをクリア
+   */
+  const onSuggestionsClearRequested = () => {
+    setSuggestions([])
+  }
+
+  /**
+   * サジェストデータの取得
+   */
+  const getSuggestionValue = (suggestions: string) => {
+    return suggestions
+  }
+
+  /**
+   * サジェストのレンダリング
+   */
+  const renderSuggestion = (suggestion: string) => {
+    return <div>{suggestion}</div>
+  }
+
+  /**
+   * フォーム入力
+   */
+  const onChangeInput = (
+    event: BaseSyntheticEvent,
+    { newValue }: { newValue: string }
+  ) => {
+    if (event) setInputValue(newValue)
+  }
+
+  /**
+   * インプット情報
+   */
+  const inputProps = {
+    value: inputValue,
+    onChange: onChangeInput,
+    placeholder: placeholderText,
+  }
+
+  return (
+    <>
+      <h2>AutoSuggestEmailForm</h2>
+      <SuggestStyle />
+      <AutoSuggest
+        suggestions={suggestions}
+        onSuggestionsFetchRequested={onSuggestionsFetchRequested}
+        onSuggestionsClearRequested={onSuggestionsClearRequested}
+        getSuggestionValue={getSuggestionValue}
+        renderSuggestion={renderSuggestion}
+        inputProps={inputProps}
+      />
+    </>
+  )
+}
+
+export default AutoSuggestEmailForm

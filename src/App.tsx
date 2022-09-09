@@ -11,6 +11,7 @@ import UseReducer from './pages/useReducer'
 import UseRef from './pages/useRef'
 import Redux from './pages/redux'
 import ReduxToolkit from './pages/reduxToolkit'
+import AutoSuggest from './pages/auto_suggest'
 
 const App: FC = () => {
   return (
@@ -26,6 +27,7 @@ const App: FC = () => {
         <Route path="/use_callback" element={<UseRef />} />
         <Route path="/redux_toolkit" element={<ReduxToolkit />} />
         <Route path="/redux" element={<Redux />} />
+        <Route path="/auto_suggest" element={<AutoSuggest />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
