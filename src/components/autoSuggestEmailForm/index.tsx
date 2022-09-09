@@ -1,12 +1,16 @@
-import { FC, BaseSyntheticEvent, Dispatch, SetStateAction } from 'react'
+import {
+  FC,
+  BaseSyntheticEvent,
+  Dispatch,
+  SetStateAction,
+  useState,
+} from 'react'
 import AutoSuggest from 'react-autosuggest'
 import SuggestStyle from './style'
 
 export type AutoSuggestEmailForm = {
   inputValue: string
   setInputValue: Dispatch<SetStateAction<string>>
-  suggestions: string[]
-  setSuggestions: Dispatch<SetStateAction<string[]>>
   suggestionDataSet: string[]
   placeholderText: string
 }
@@ -14,11 +18,11 @@ export type AutoSuggestEmailForm = {
 const AutoSuggestEmailForm: FC<AutoSuggestEmailForm> = ({
   inputValue,
   setInputValue,
-  suggestions,
-  setSuggestions,
   suggestionDataSet,
   placeholderText,
 }) => {
+  const [suggestions, setSuggestions] = useState<string[]>([])
+
   const domains = suggestionDataSet.map((v) => '@' + v)
 
   /**

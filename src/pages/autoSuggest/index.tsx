@@ -1,10 +1,9 @@
 import { FC, useState } from 'react'
-import AutoSuggestEmailForm from '../../components/auto_suggest_email_form'
+import AutoSuggestEmailForm from '../../components/autoSuggestEmailForm'
 import { EMAIL_DOMAIN_LIST } from './constants'
 
 const AutoSuggest: FC = () => {
   const [input, setInput] = useState('')
-  const [suggestions, setSuggestions] = useState<string[]>([])
 
   return (
     <>
@@ -13,8 +12,6 @@ const AutoSuggest: FC = () => {
       <AutoSuggestEmailForm
         inputValue={input}
         setInputValue={setInput}
-        suggestions={suggestions}
-        setSuggestions={setSuggestions}
         suggestionDataSet={EMAIL_DOMAIN_LIST}
         placeholderText="メールアドレスを入力してください"
       />
