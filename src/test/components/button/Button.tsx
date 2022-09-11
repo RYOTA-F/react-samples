@@ -5,10 +5,12 @@ export type ButtonProps = {
   onClick: () => void
 }
 
-export const Button: FC<ButtonProps> = ({ children, onClick }) => {
+const Button: FC<ButtonProps> = ({ children, onClick }) => {
   return (
     <button type="button" onClick={onClick}>
       {children}
     </button>
   )
 }
+
+export default Button

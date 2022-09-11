@@ -1,8 +1,8 @@
 # node_modules
 node_modules
 
-# Git
-.github
+# Memo
+.memo
 
 # Etc
 .DS_Store
