@@ -20,6 +20,12 @@ $ yarn install
 $ yarn start
 ```
 
+## Test
+
+```sh
+$ yarn test
+```
+
 ## Versions
 
 - typescript: 4.6.2
