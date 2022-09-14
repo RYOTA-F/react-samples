@@ -8,7 +8,6 @@ const AutoSuggest: FC = () => {
   return (
     <>
       <h1>AutoSuggest</h1>
-      <hr />
       <AutoSuggestEmailForm
         inputValue={input}
         setInputValue={setInput}

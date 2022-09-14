@@ -1,10 +1,4 @@
-import {
-  FC,
-  BaseSyntheticEvent,
-  Dispatch,
-  SetStateAction,
-  useState,
-} from 'react'
+import { FC, BaseSyntheticEvent, Dispatch, SetStateAction, useState } from 'react'
 import AutoSuggest from 'react-autosuggest'
 import SuggestStyle from './style'
 
@@ -26,25 +20,11 @@ const AutoSuggestEmailForm: FC<AutoSuggestEmailForm> = ({
   const domains = suggestionDataSet.map((v) => '@' + v)
 
   /**
-   * サジェストデータを変換
-   */
-  const convertSuggestion = (inputValue: string, domain: string) => {
-    const account = inputValue.match('@')
-      ? inputValue.substring(0, inputValue.indexOf('@'))
-      : inputValue
-
-    return account + domain
-  }
-
-  /**
    * サジェストデータを読み込み
    */
   const onSuggestionsFetchRequested = ({ value }: { value: string }) => {
-    setSuggestions(
-      domains.map((domain) => {
-        return convertSuggestion(value, domain)
-      })
-    )
+    const account = value.match('@') ? value.substring(0, value.indexOf('@')) : value
+    setSuggestions(domains.map((domain) => account + domain))
   }
 
   /**
@@ -71,10 +51,7 @@ const AutoSuggestEmailForm: FC<AutoSuggestEmailForm> = ({
   /**
    * フォーム入力
    */
-  const onChangeInput = (
-    event: BaseSyntheticEvent,
-    { newValue }: { newValue: string }
-  ) => {
+  const onChangeInput = (event: BaseSyntheticEvent, { newValue }: { newValue: string }) => {
     if (event) setInputValue(newValue)
   }
 
@@ -89,7 +66,6 @@ const AutoSuggestEmailForm: FC<AutoSuggestEmailForm> = ({
 
   return (
     <>
-      <h2>AutoSuggestEmailForm</h2>
       <SuggestStyle />
       <AutoSuggest
         suggestions={suggestions}
