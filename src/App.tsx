@@ -13,6 +13,7 @@ import Redux from './pages/redux'
 import ReduxToolkit from './pages/reduxToolkit'
 import AutoSuggest from './pages/autoSuggest'
 import LoadingTest from './pages/loading'
+import ModalTest from './pages/modal'
 
 const App: FC = () => {
   return (
@@ -30,6 +31,7 @@ const App: FC = () => {
         <Route path="/redux" element={<Redux />} />
         <Route path="/auto_suggest" element={<AutoSuggest />} />
         <Route path="/loading" element={<LoadingTest />} />
+        <Route path="/modal" element={<ModalTest />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
