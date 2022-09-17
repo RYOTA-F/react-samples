@@ -1,20 +1,20 @@
 import { FC } from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import Home from './pages/home'
-import NotFound from './pages/notFound'
-import UseLocalStorage from './pages/useLocalStorage'
-import Swr from './pages/swr'
-import UseState from './pages/useState'
-import UseEffect from './pages/useEffect'
-import UseContext from './pages/useContext'
-import UseReducer from './pages/useReducer'
-import UseRef from './pages/useRef'
-import Redux from './pages/redux'
-import ReduxToolkit from './pages/reduxToolkit'
-import AutoSuggest from './pages/autoSuggest'
-import LoadingTest from './pages/loading'
-import ModalTest from './pages/modal'
-import Login from './pages/login'
+import Home from '../pages/home'
+import NotFound from '../pages/notFound'
+import UseLocalStorage from '../pages/useLocalStorage'
+import Swr from '../pages/swr'
+import UseState from '../pages/useState'
+import UseEffect from '../pages/useEffect'
+import UseContext from '../pages/useContext'
+import UseReducer from '../pages/useReducer'
+import UseRef from '../pages/useRef'
+import Redux from '../pages/redux'
+import ReduxToolkit from '../pages/reduxToolkit'
+import AutoSuggest from '../pages/autoSuggest'
+import LoadingTest from '../pages/loading'
+import ModalTest from '../pages/modal'
+import FirebaseLogin from '../pages/firebaseLogin'
 
 const Router: FC = () => {
   return (
@@ -33,7 +33,7 @@ const Router: FC = () => {
         <Route path="/auto_suggest" element={<AutoSuggest />} />
         <Route path="/loading" element={<LoadingTest />} />
         <Route path="/modal" element={<ModalTest />} />
-        <Route path="/login" element={<Login />} />
+        <Route path="/firebase_login" element={<FirebaseLogin />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>

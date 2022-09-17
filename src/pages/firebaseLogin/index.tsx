@@ -9,7 +9,7 @@ import authState from '../../lib/recoil/atom/auth'
 /* styles */
 import { LoginContainer } from './style'
 
-const Login: FC = () => {
+const FirebaseLogin: FC = () => {
   const authUser = useRecoilValue(authState)
 
   return (
@@ -30,4 +30,4 @@ const Login: FC = () => {
   )
 }
 
-export default Login
+export default FirebaseLogin
