@@ -18,7 +18,7 @@ export const signOutWithGoogle = () => {
 }
 
 /**
- *
+ * Googleアカウント・ログイン状態チェック
  */
 export const useIsSigned = () => {
   const [user] = useAuthState(googleAuth)
