@@ -14,6 +14,7 @@ import ReduxToolkit from './pages/reduxToolkit'
 import AutoSuggest from './pages/autoSuggest'
 import LoadingTest from './pages/loading'
 import ModalTest from './pages/modal'
+import LoginFirebase from './pages/loginFirebase'
 
 const App: FC = () => {
   return (
@@ -32,6 +33,7 @@ const App: FC = () => {
         <Route path="/auto_suggest" element={<AutoSuggest />} />
         <Route path="/loading" element={<LoadingTest />} />
         <Route path="/modal" element={<ModalTest />} />
+        <Route path="/login" element={<LoginFirebase />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>

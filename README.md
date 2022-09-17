@@ -14,6 +14,20 @@ $ git clone https://github.com/RYOTA-F/react-samples.git
 $ yarn install
 ```
 
+### Firebase Setting
+
+1. Copy .env
+
+```sh
+$ cp .env_example .env
+```
+
+2. Edit .env
+
+```sh
+$ vi .env
+```
+
 ## Run
 
 ```sh
