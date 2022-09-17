@@ -8,10 +8,10 @@ import { useIsSigned } from '../../lib/auth/google'
 /* styles */
 import { LoginContainer } from './style'
 
-const LoginFirebase: FC = () => {
+const Login: FC = () => {
   return (
     <LoginContainer>
-      <h1>LoginFirebase</h1>
+      <h1>Login</h1>
       {useIsSigned() ? (
         <>
           <UserInfo />
@@ -26,4 +26,4 @@ const LoginFirebase: FC = () => {
   )
 }
 
-export default LoginFirebase
+export default Login

@@ -6,15 +6,17 @@ import { googleAuth, googleProvider } from '../../config/firebase'
 /**
  * Googleアカウント・ログイン
  */
-export const signInWithGoogle = () => {
-  signInWithPopup(googleAuth, googleProvider)
+export const signInWithGoogle = async () => {
+  const res = await signInWithPopup(googleAuth, googleProvider)
+  return res.user
 }
 
 /**
  * Googleアカウント・ログアウト
  */
-export const signOutWithGoogle = () => {
-  googleAuth.signOut()
+export const signOutWithGoogle = async () => {
+  await googleAuth.signOut()
+  return true
 }
 
 /**
@@ -22,7 +24,6 @@ export const signOutWithGoogle = () => {
  */
 export const useIsSigned = () => {
   const [user] = useAuthState(googleAuth)
-
   return Boolean(user)
 }
 
