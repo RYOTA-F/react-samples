@@ -19,6 +19,7 @@ import ReduxToolkit from '../pages/reduxToolkit'
 import AutoSuggest from '../pages/autoSuggest'
 import LoadingTest from '../pages/loading'
 import ModalTest from '../pages/modal'
+import MyPage from '../pages/myPage'
 import SignIn from '../pages/signIn'
 import SignOut from '../pages/signOut'
 
@@ -26,15 +27,6 @@ const Router: FC = () => {
   return (
     <>
       <BrowserRouter>
-        {/* Guest */}
-        <PublicRouter path="/sign_in" element={<SignIn />} />
-        {/* Guest */}
-
-        {/* Private */}
-        <PublicRouter path="/modal" element={<ModalTest />} />
-        <PublicRouter path="/sign_out" element={<SignOut />} />
-        {/* Private */}
-
         {/* Public */}
         <PublicRouter path="/" element={<Home />} />
         <PublicRouter path="/swr" element={<Swr />} />
@@ -47,8 +39,18 @@ const Router: FC = () => {
         <PublicRouter path="/redux_toolkit" element={<ReduxToolkit />} />
         <PublicRouter path="/redux" element={<Redux />} />
         <PublicRouter path="/auto_suggest" element={<AutoSuggest />} />
-        <GuestRouter path="/loading" element={<LoadingTest />} />
+        <PublicRouter path="/loading" element={<LoadingTest />} />
+        <PublicRouter path="/my_page" element={<MyPage />} />
         {/* Public */}
+
+        {/* Guest */}
+        <PublicRouter path="/sign_in" element={<SignIn />} />
+        {/* Guest */}
+
+        {/* Private */}
+        <PublicRouter path="/modal" element={<ModalTest />} />
+        <PublicRouter path="/sign_out" element={<SignOut />} />
+        {/* Private */}
 
         {/* NotFound */}
         {/* <PublicRoute path="*" element={<NotFound />} /> */}
