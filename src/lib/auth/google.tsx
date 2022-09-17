@@ -1,7 +1,11 @@
+import { useEffect } from 'react'
 import { signInWithPopup } from 'firebase/auth'
 import { useAuthState } from 'react-firebase-hooks/auth'
+import { useRecoilState, useResetRecoilState } from 'recoil'
 /* config */
 import { googleAuth, googleProvider } from '../../config/firebase'
+/* store */
+import { signInUserState } from '../../store/auth'
 
 /**
  * Googleアカウント・ログイン
@@ -35,4 +39,29 @@ export const getCurrentUserInfo = () => {
   const imageUrl = String(googleAuth.currentUser?.photoURL)
 
   return { userName, imageUrl }
+}
+
+/**
+ * SignInの状態を監視する
+ */
+export const useGoogleAuth = () => {
+  const [signInUser, setSignInUser] = useRecoilState(signInUserState)
+  const resetStatus = useResetRecoilState(signInUserState)
+
+  useEffect(() => {
+    const unSub = googleAuth.onAuthStateChanged((authUser) => {
+      if (authUser) {
+        setSignInUser({
+          uid: authUser.uid,
+          displayName: authUser.displayName ? authUser.displayName : '',
+          photoUrl: authUser.photoURL ? authUser.photoURL : '',
+        })
+      } else {
+        resetStatus()
+      }
+    })
+    return () => unSub()
+  }, [setSignInUser, resetStatus])
+
+  return signInUser
 }
