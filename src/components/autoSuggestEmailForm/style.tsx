@@ -44,6 +44,7 @@ const SuggestStyle: FC = () => {
       display: block;
       position: absolute;
       top: 51px;
+      left: 36%;
       border: 1px solid #aaa;
       background-color: #fff;
       font-family: Helvetica, sans-serif;
