@@ -9,8 +9,7 @@ const SignInButton: FC = () => {
    * サインインをクリック
    */
   const onClickSignIn = async () => {
-    const authUser = await signInWithGoogle()
-    // if (authUser) setAuth(authUser)
+    await signInWithGoogle()
   }
 
   return <Button onClick={onClickSignIn}>Googleでサインイン</Button>

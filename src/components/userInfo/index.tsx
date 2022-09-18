@@ -1,16 +1,18 @@
 import { FC } from 'react'
 /* libs */
-import { getCurrentUserInfo } from '../../lib/auth/google'
+import { useGoogleAuth } from '../../lib/auth/google'
 /* styles */
 import { UserIcon, UserName } from './style'
 
 const UserInfo: FC = () => {
-  const { userName, imageUrl } = getCurrentUserInfo()
+  const signInUser = useGoogleAuth()
+  const userName = signInUser.displayName
+  const photoUrl = signInUser.photoUrl
 
   return (
     <>
-      <UserIcon src={imageUrl} />
-      <UserName>{userName}</UserName>
+      {photoUrl && <UserIcon src={photoUrl} />}
+      {userName && <UserName>{userName}</UserName>}
     </>
   )
 }

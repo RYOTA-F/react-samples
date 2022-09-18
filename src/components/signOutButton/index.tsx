@@ -9,8 +9,7 @@ const SignOutButton: FC = () => {
    * サインアウトをクリック
    */
   const onClickSignOut = async () => {
-    const res = await signOutWithGoogle()
-    // if (res) setAuth(null)
+    await signOutWithGoogle()
   }
 
   return (
