@@ -1,9 +1,9 @@
 import { FC } from 'react'
-import { BrowserRouter } from 'react-router-dom'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 /* router */
-import GuestRouter from '../router/GuestRouter'
-import PrivateRouter from '../router/PrivateRouter'
-import PublicRouter from '../router/PublicRouter'
+import GuestRouter from './GuestRouter'
+import PrivateRouter from './PrivateRouter'
+import PublicRouter from './PublicRouter'
 /* pages */
 import Home from '../pages/home'
 import NotFound from '../pages/notFound'
@@ -28,32 +28,34 @@ const Router: FC = () => {
     <>
       <BrowserRouter>
         {/* Public */}
-        <PublicRouter path="/" element={<Home />} />
-        <PublicRouter path="/swr" element={<Swr />} />
-        <PublicRouter path="/use_local_storage" element={<UseLocalStorage />} />
-        <PublicRouter path="/use_state" element={<UseState />} />
-        <PublicRouter path="/use_effect" element={<UseEffect />} />
-        <PublicRouter path="/use_context" element={<UseContext />} />
-        <PublicRouter path="/use_reducer" element={<UseReducer />} />
-        <PublicRouter path="/use_callback" element={<UseRef />} />
-        <PublicRouter path="/redux_toolkit" element={<ReduxToolkit />} />
-        <PublicRouter path="/redux" element={<Redux />} />
-        <PublicRouter path="/auto_suggest" element={<AutoSuggest />} />
-        <PublicRouter path="/loading" element={<LoadingTest />} />
-        <PublicRouter path="/my_page" element={<MyPage />} />
-        {/* Public */}
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/swr" element={<Swr />} />
+          <Route path="/use_local_storage" element={<UseLocalStorage />} />
+          <Route path="/use_state" element={<UseState />} />
+          <Route path="/use_effect" element={<UseEffect />} />
+          <Route path="/use_context" element={<UseContext />} />
+          <Route path="/use_reducer" element={<UseReducer />} />
+          <Route path="/use_callback" element={<UseRef />} />
+          <Route path="/redux_toolkit" element={<ReduxToolkit />} />
+          <Route path="/redux" element={<Redux />} />
+          <Route path="/auto_suggest" element={<AutoSuggest />} />
+          <Route path="/loading" element={<LoadingTest />} />
+          <Route path="/modal" element={<ModalTest />} />
+          <Route path="/my_page" element={<MyPage />} />
+          <Route path="/sign_in" element={<SignIn />} />
+          <Route path="/sign_out" element={<SignOut />} />
+          {/* Public */}
 
-        {/* Guest */}
-        <PublicRouter path="/sign_in" element={<SignIn />} />
-        {/* Guest */}
+          {/* Guest */}
+          {/* Guest */}
 
-        {/* Private */}
-        <PublicRouter path="/modal" element={<ModalTest />} />
-        <PublicRouter path="/sign_out" element={<SignOut />} />
-        {/* Private */}
+          {/* Private */}
+          {/* Private */}
 
-        {/* NotFound */}
-        {/* <PublicRoute path="*" element={<NotFound />} /> */}
+          {/* NotFound */}
+          <Route path="*" element={<NotFound />} />
+        </Routes>
       </BrowserRouter>
     </>
   )
