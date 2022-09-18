@@ -1,11 +1,12 @@
 import { FC } from 'react'
-/* libs */
-import useGoogleSignInUser from '../../lib/hooks/useGoogleSignInUser'
+import { useRecoilValue } from 'recoil'
 /* styles */
 import { UserIcon, UserName } from './style'
+/* store */
+import signInUserState, { SignInUserStateType } from '../../store/auth'
 
 const UserInfo: FC = () => {
-  const signInUser = useGoogleSignInUser()
+  const signInUser = useRecoilValue<SignInUserStateType>(signInUserState)
   const userName = signInUser.displayName
   const photoUrl = signInUser.photoUrl
 

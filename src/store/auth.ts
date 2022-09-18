@@ -6,12 +6,19 @@ const { persistAtom } = recoilPersist({
   storage: sessionStorage,
 })
 
-export const signInUserState = atom({
+export const initialValue = {
+  login: false,
+  uid: '',
+  displayName: '',
+  photoUrl: '',
+}
+
+export type SignInUserStateType = typeof initialValue
+
+const signInUserState = atom({
   key: 'auth/signIn',
-  default: {
-    uid: '',
-    displayName: '',
-    photoUrl: '',
-  },
+  default: initialValue,
   effects_UNSTABLE: [persistAtom],
 })
+
+export default signInUserState

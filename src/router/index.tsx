@@ -1,7 +1,5 @@
 import { FC } from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-/* router */
-import RouteAuthGuard from './RouteAuthGuard'
 /* pages */
 import Home from '../pages/home'
 import NotFound from '../pages/notFound'
@@ -21,6 +19,10 @@ import OnetimePasswordTest from '../pages/onetimePassword'
 import MyPage from '../pages/myPage'
 import SignIn from '../pages/signIn'
 import SignOut from '../pages/signOut'
+/* router */
+import RouteAuthGuard from './RouteAuthGuard'
+/* types */
+import { PAGE_TYPE } from '../types/auth'
 
 const Router: FC = () => {
   return (
@@ -42,25 +44,35 @@ const Router: FC = () => {
           <Route path="/loading" element={<LoadingTest />} />
           <Route path="/modal" element={<ModalTest />} />
           <Route path="/onetime_password" element={<OnetimePasswordTest />} />
-          <Route path="/sign_in" element={<SignIn />} />
           {/* Public */}
 
           {/* Guest */}
+          <Route
+            path="/sign_in"
+            element={
+              <RouteAuthGuard component={<SignIn />} redirect={'/my_page'} type={PAGE_TYPE.GUEST} />
+            }
+          />
           {/* Guest */}
 
           {/* Private */}
           <Route
             path="/my_page"
-            element={<RouteAuthGuard component={<MyPage />} redirect={'/'} />}
+            element={
+              <RouteAuthGuard component={<MyPage />} redirect={'/'} type={PAGE_TYPE.PRIVATE} />
+            }
           />
           <Route
             path="/sign_out"
-            element={<RouteAuthGuard component={<SignOut />} redirect={'/'} />}
+            element={
+              <RouteAuthGuard component={<SignOut />} redirect={'/'} type={PAGE_TYPE.PRIVATE} />
+            }
           />
           {/* Private */}
 
           {/* NotFound */}
           <Route path="*" element={<NotFound />} />
+          {/* NotFound */}
         </Routes>
       </BrowserRouter>
     </>
