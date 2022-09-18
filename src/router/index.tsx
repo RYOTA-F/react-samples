@@ -1,9 +1,7 @@
 import { FC } from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 /* router */
-import GuestRouter from './GuestRouter'
-import PrivateRouter from './PrivateRouter'
-import PublicRouter from './PublicRouter'
+import RouteAuthGuard from './RouteAuthGuard'
 /* pages */
 import Home from '../pages/home'
 import NotFound from '../pages/notFound'
@@ -30,7 +28,7 @@ const Router: FC = () => {
       <BrowserRouter>
         {/* Public */}
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route index element={<Home />} />
           <Route path="/swr" element={<Swr />} />
           <Route path="/use_local_storage" element={<UseLocalStorage />} />
           <Route path="/use_state" element={<UseState />} />
@@ -44,15 +42,21 @@ const Router: FC = () => {
           <Route path="/loading" element={<LoadingTest />} />
           <Route path="/modal" element={<ModalTest />} />
           <Route path="/onetime_password" element={<OnetimePasswordTest />} />
-          <Route path="/my_page" element={<MyPage />} />
           <Route path="/sign_in" element={<SignIn />} />
-          <Route path="/sign_out" element={<SignOut />} />
           {/* Public */}
 
           {/* Guest */}
           {/* Guest */}
 
           {/* Private */}
+          <Route
+            path="/my_page"
+            element={<RouteAuthGuard component={<MyPage />} redirect={'/'} />}
+          />
+          <Route
+            path="/sign_out"
+            element={<RouteAuthGuard component={<SignOut />} redirect={'/'} />}
+          />
           {/* Private */}
 
           {/* NotFound */}
