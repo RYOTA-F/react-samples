@@ -1,11 +1,11 @@
 import { FC } from 'react'
 /* libs */
-import { useGoogleAuth } from '../../lib/auth/google'
+import useGoogleSignInUser from '../../lib/hooks/useGoogleSignInUser'
 /* styles */
 import { UserIcon, UserName } from './style'
 
 const UserInfo: FC = () => {
-  const signInUser = useGoogleAuth()
+  const signInUser = useGoogleSignInUser()
   const userName = signInUser.displayName
   const photoUrl = signInUser.photoUrl
 
