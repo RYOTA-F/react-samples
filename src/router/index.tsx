@@ -19,6 +19,7 @@ import ReduxToolkit from '../pages/reduxToolkit'
 import AutoSuggest from '../pages/autoSuggest'
 import LoadingTest from '../pages/loading'
 import ModalTest from '../pages/modal'
+import OnetimePasswordTest from '../pages/onetimePassword'
 import MyPage from '../pages/myPage'
 import SignIn from '../pages/signIn'
 import SignOut from '../pages/signOut'
@@ -42,6 +43,7 @@ const Router: FC = () => {
           <Route path="/auto_suggest" element={<AutoSuggest />} />
           <Route path="/loading" element={<LoadingTest />} />
           <Route path="/modal" element={<ModalTest />} />
+          <Route path="/onetime_password" element={<OnetimePasswordTest />} />
           <Route path="/my_page" element={<MyPage />} />
           <Route path="/sign_in" element={<SignIn />} />
           <Route path="/sign_out" element={<SignOut />} />
