@@ -15,6 +15,7 @@ import ReduxToolkit from '../pages/reduxToolkit'
 import AutoSuggest from '../pages/autoSuggest'
 import LoadingTest from '../pages/loading'
 import ModalTest from '../pages/modal'
+import ReactHookForm from '../pages/reactHookForm'
 import OnetimePasswordTest from '../pages/onetimePassword'
 import MyPage from '../pages/myPage'
 import SignIn from '../pages/signIn'
@@ -44,6 +45,7 @@ const Router: FC = () => {
           <Route path="/loading" element={<LoadingTest />} />
           <Route path="/modal" element={<ModalTest />} />
           <Route path="/onetime_password" element={<OnetimePasswordTest />} />
+          <Route path="/form" element={<ReactHookForm />} />
           {/* Public */}
 
           {/* Guest */}

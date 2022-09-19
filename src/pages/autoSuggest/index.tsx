@@ -1,6 +1,6 @@
 import { FC, useState } from 'react'
 import AutoSuggestEmailForm from '../../components/autoSuggestEmailForm'
-import { EMAIL_DOMAIN_LIST } from './constants'
+import { EMAIL_DOMAIN_LIST } from '../../constants/domain'
 
 const AutoSuggest: FC = () => {
   const [input, setInput] = useState('')
