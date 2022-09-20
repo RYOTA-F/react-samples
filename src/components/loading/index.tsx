@@ -1,4 +1,4 @@
-import { FC, useState } from 'react'
+import { useState } from 'react'
 import ReactLoading from 'react-loading'
 /* styles */
 import { Container, MarginContainer } from './style'

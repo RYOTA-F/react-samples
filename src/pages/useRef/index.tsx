@@ -3,7 +3,7 @@ import usePrevious from './usePrevious'
 
 const UseRef: FC = () => {
   const [count, setCount] = useState(0)
-  const prevCount = usePrevious(count)
+  const prevCount = usePrevious<number>(count)
 
   return (
     <div>

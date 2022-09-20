@@ -1,4 +1,4 @@
-import { render, screen } from '@testing-library/react'
+import { render } from '@testing-library/react'
 import Header from './Header'
 
 test('Propsがない場合はデフォルト文字列が表示される', () => {

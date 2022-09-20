@@ -38,7 +38,7 @@ const Router: FC = () => {
           <Route path="/use_effect" element={<UseEffect />} />
           <Route path="/use_context" element={<UseContext />} />
           <Route path="/use_reducer" element={<UseReducer />} />
-          <Route path="/use_callback" element={<UseRef />} />
+          <Route path="/use_ref" element={<UseRef />} />
           <Route path="/redux_toolkit" element={<ReduxToolkit />} />
           <Route path="/redux" element={<Redux />} />
           <Route path="/auto_suggest" element={<AutoSuggest />} />

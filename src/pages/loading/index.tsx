@@ -10,7 +10,7 @@ const LoadingTest: FC = () => {
     setTimeout(() => {
       setIsLoading(false)
     }, 3000)
-  }, [isLoading])
+  }, [isLoading, setIsLoading])
 
   return (
     <>
