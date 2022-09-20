@@ -15,8 +15,6 @@ const AutoSuggestEmailForm: FC<AutoSuggestEmailFormProps> = ({
   suggestionDataSet,
   placeholderText,
 }) => {
-  console.log('test')
-
   const [suggestions, setSuggestions] = useState<string[]>([])
 
   const domains = suggestionDataSet.map((v) => '@' + v)
