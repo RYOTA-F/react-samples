@@ -4744,6 +4744,11 @@
   dependencies:
     recoil "*"
 
+"@types/recoilize@^0.8.0":
+  version "0.8.0"
+  resolved "https://registry.yarnpkg.com/@types/recoilize/-/recoilize-0.8.0.tgz#7351f7a048bcef9c712f39d05696ce7fd2a414fe"
+  integrity sha512-h4Rm8J/8XH1wZIZC5gOeN9EDJWBhK2sLEs5voSHyZKB5cynIDbohuYS6rEdv2kNPrwoYQyt7D3yeXI9ODvZDlw==
+
 "@types/redux-devtools-extension@^2.13.2":
   version "2.13.2"
   resolved "https://registry.yarnpkg.com/@types/redux-devtools-extension/-/redux-devtools-extension-2.13.2.tgz#b2e09a8c163b2b0f5072e6a5ac41474000df2111"
@@ -14138,6 +14143,11 @@ recoil@*, recoil@^0.7.5:
   integrity sha512-GVShsj5+M/2GULWBs5WBJGcsNis/d3YvDiaKjYh3mLKXftjtmk9kfaQ8jwjoIXySCwn8/RhgJ4Sshwgzj2UpFA==
   dependencies:
     hamt_plus "1.0.2"
+
+recoilize@^3.1.6:
+  version "3.1.6"
+  resolved "https://registry.yarnpkg.com/recoilize/-/recoilize-3.1.6.tgz#4ceba2e84979a43d3fba6c18890a181372445dd0"
+  integrity sha512-UxdkpMvnEYvnUIcIbk5NAe9tZFBkxbMaP8BUKDj1DQ9ZBYO03c8xi/jnWYSsIvRV5D3eYO8rhTzmegI86o2FBw==
 
 recursive-readdir@^2.2.2:
   version "2.2.2"
