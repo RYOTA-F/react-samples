@@ -1,14 +1,14 @@
-# Env
-.env
-
 # Jest
 coverage
 
 # node_modules
 node_modules
 
-# Memo
-.memo
+# Commit Template
+.commit
 
 # Etc
 .DS_Store
+
+# Env
+.env
