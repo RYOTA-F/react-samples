@@ -60,7 +60,8 @@ export const AlertMessage = style.div`
 `
 
 export const Button = style.button`
-  margin-top: 48px;
+  display: block;
+  margin: 48px auto 0;
   padding: 10px 12px;
   background-color: #1473e6;
   border-radius: 4px;
@@ -70,6 +71,8 @@ export const Button = style.button`
 `
 
 export const ButtonUnclickable = style.button`
+  display: block;
+  margin: 48px auto 0;
   margin-top: 48px;
   padding: 10px 12px;
   background-color: #cfd4dc;

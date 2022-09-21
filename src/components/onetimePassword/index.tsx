@@ -12,7 +12,7 @@ import {
   ButtonUnclickable,
 } from './style'
 
-type OnetimePasswordProp = {
+export type OnetimePasswordProp = {
   onetimePassword: number
 }
 
