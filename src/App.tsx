@@ -3,7 +3,7 @@ import { RecoilRoot } from 'recoil'
 import RecoilizeDebugger from 'recoilize'
 import { ThemeProvider } from 'styled-components'
 /* components */
-import Header from './components/header'
+import HeaderAndSidebar from './components/headerAndSidebar'
 import Footer from './components/footer'
 /* router */
 import Router from './router'
@@ -18,7 +18,7 @@ const App: FC = () => {
         <RecoilizeDebugger />
         <GlobalStyle />
         <ThemeProvider theme={APP_THEME}>
-          <Header />
+          <HeaderAndSidebar />
           <Router />
           <Footer />
         </ThemeProvider>

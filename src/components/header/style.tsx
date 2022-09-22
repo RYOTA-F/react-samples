@@ -1,6 +1,8 @@
 import style from 'styled-components'
 
 export const Container = style.div`
+  display: flex;
+  justify-content: space-between;
   position: absolute;
   top: 0;
   height: 60px;
@@ -14,4 +16,8 @@ export const Title = style.div`
   line-height: 60px;
   font-size: 24px;
   font-weight: bold;
+`
+
+export const Empty = style.div`
+  width: 60px;
 `
