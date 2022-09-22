@@ -3,6 +3,7 @@ import { RecoilRoot } from 'recoil'
 import RecoilizeDebugger from 'recoilize'
 /* components */
 import Header from './components/header'
+import Footer from './components/footer'
 /* router */
 import Router from './router'
 /* styles */
@@ -16,6 +17,7 @@ const App: FC = () => {
         <GlobalStyle />
         <Header />
         <Router />
+        <Footer />
       </RecoilRoot>
     </AppContainer>
   )
