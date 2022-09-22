@@ -1,6 +1,8 @@
 import { FC } from 'react'
 import { RecoilRoot } from 'recoil'
 import RecoilizeDebugger from 'recoilize'
+/* components */
+import Header from './components/header'
 /* router */
 import Router from './router'
 /* styles */
@@ -12,6 +14,7 @@ const App: FC = () => {
       <RecoilRoot>
         <RecoilizeDebugger />
         <GlobalStyle />
+        <Header />
         <Router />
       </RecoilRoot>
     </AppContainer>
