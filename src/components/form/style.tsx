@@ -28,5 +28,5 @@ export const FormSubmit = style.input`
 `
 
 export const FormError = style.span`
-  color: #ff0000;
+  color: ${(props) => props.theme.colors.red};
 `

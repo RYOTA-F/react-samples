@@ -5,10 +5,10 @@ export const Button = style.button`
   padding: 7px 40px;
   border: none;
   border-radius: 10px;
-  box-shadow: 1px 5px 10px #626262;
+  box-shadow: 1px 5px 10px ${(props) => props.theme.colors.gray};
   cursor: pointer;
-  background-color: #4c6cb3;
-  color: white;
+  background-color: ${(props) => props.theme.colors.main};
+  color: ${(props) => props.theme.colors.white};
   font-weight: 800;
   font-size: 1.2rem;
 `
