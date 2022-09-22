@@ -28,9 +28,9 @@ export const CUSTOM_COMPONENT_PAGES = {
 }
 
 export const AUTH_PAGES = {
-  SIGN_IN: { url: '/sign_in', title: 'signIn' },
-  SIGN_OUT: { url: '/sign_out', title: 'signOut' },
-  MY_PAGE: { url: '/my_page', title: 'myPage' },
+  SIGN_IN: { url: '/sign_in', title: 'Sign In' },
+  SIGN_OUT: { url: '/sign_out', title: 'Sign Out' },
+  MY_PAGE: { url: '/my_page', title: 'My Page' },
 } as const
 
 export const HOOKS_PAGE_LIST = Object.entries(HOOKS_PAGES).map((page) => page[1])

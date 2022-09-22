@@ -1,4 +1,5 @@
 import { FC } from 'react'
+import { useRecoilValue } from 'recoil'
 import { ProSidebar, Menu, MenuItem, SubMenu } from 'react-pro-sidebar'
 import {
   HOOKS_PAGE_LIST,
@@ -10,12 +11,16 @@ import {
 } from '../../constants/pages'
 /* styles */
 import ReactProSidebarCSS, { Link, Border } from './style'
+/* store */
+import signInUserState, { SignInUserStateType } from '../../store/auth'
 
 type SidebarProps = {
   isSidebarOpen: boolean
 }
 
 const Sidebar: FC<SidebarProps> = ({ isSidebarOpen }) => {
+  const isSignedIn = useRecoilValue<SignInUserStateType>(signInUserState).login
+
   return (
     <>
       <>
@@ -70,15 +75,21 @@ const Sidebar: FC<SidebarProps> = ({ isSidebarOpen }) => {
 
             <Border />
 
-            <MenuItem icon={<div>👉</div>}>
-              <Link href={AUTH_PAGES.SIGN_IN.url}>{AUTH_PAGES.SIGN_IN.title}</Link>
-            </MenuItem>
-            <MenuItem icon={<div>👉</div>}>
-              <Link href={AUTH_PAGES.SIGN_OUT.url}>{AUTH_PAGES.SIGN_OUT.title}</Link>
-            </MenuItem>
-            <MenuItem icon={<div>👉</div>}>
-              <Link href={AUTH_PAGES.MY_PAGE.url}>{AUTH_PAGES.MY_PAGE.title}</Link>
-            </MenuItem>
+            {isSignedIn ? (
+              <>
+                <MenuItem icon={<div>👉</div>}>
+                  <Link href={AUTH_PAGES.MY_PAGE.url}>{AUTH_PAGES.MY_PAGE.title}</Link>
+                </MenuItem>
+
+                <MenuItem icon={<div>👉</div>}>
+                  <Link href={AUTH_PAGES.SIGN_OUT.url}>{AUTH_PAGES.SIGN_OUT.title}</Link>
+                </MenuItem>
+              </>
+            ) : (
+              <MenuItem icon={<div>👉</div>}>
+                <Link href={AUTH_PAGES.SIGN_IN.url}>{AUTH_PAGES.SIGN_IN.title}</Link>
+              </MenuItem>
+            )}
 
             <Border />
           </Menu>
