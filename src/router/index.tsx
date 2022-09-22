@@ -1,5 +1,14 @@
 import { FC } from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
+/* constants */
+import {
+  HOOKS_PAGES,
+  CUSTOM_HOOK_PAGES,
+  GLOBAL_STATE_PAGES,
+  LIBRARY_PAGES,
+  CUSTOM_COMPONENT_PAGES,
+  AUTH_PAGES,
+} from '../constants/pages'
 /* pages */
 import Home from '../pages/home'
 import NotFound from '../pages/notFound'
@@ -32,25 +41,28 @@ const Router: FC = () => {
         {/* Public */}
         <Routes>
           <Route index element={<Home />} />
-          <Route path="/swr" element={<Swr />} />
-          <Route path="/use_local_storage" element={<UseLocalStorage />} />
-          <Route path="/use_state" element={<UseState />} />
-          <Route path="/use_effect" element={<UseEffect />} />
-          <Route path="/use_context" element={<UseContext />} />
-          <Route path="/use_reducer" element={<UseReducer />} />
-          <Route path="/use_ref" element={<UseRef />} />
-          <Route path="/redux_toolkit" element={<ReduxToolkit />} />
-          <Route path="/redux" element={<Redux />} />
-          <Route path="/auto_suggest" element={<AutoSuggest />} />
-          <Route path="/loading" element={<LoadingTest />} />
-          <Route path="/modal" element={<ModalTest />} />
-          <Route path="/onetime_password" element={<OnetimePasswordTest />} />
-          <Route path="/form" element={<ReactHookForm />} />
+          <Route path={HOOKS_PAGES.USR_STATE.url} element={<UseState />} />
+          <Route path={HOOKS_PAGES.USE_EFFECT.url} element={<UseEffect />} />
+          <Route path={HOOKS_PAGES.USE_CONTEXT.url} element={<UseContext />} />
+          <Route path={HOOKS_PAGES.USR_REDUCER.url} element={<UseReducer />} />
+          <Route path={HOOKS_PAGES.USR_REF.url} element={<UseRef />} />
+          <Route path={CUSTOM_HOOK_PAGES.USE_LOCAL_STORAGE.url} element={<UseLocalStorage />} />
+          <Route path={GLOBAL_STATE_PAGES.REDUX.url} element={<Redux />} />
+          <Route path={GLOBAL_STATE_PAGES.REDUX_TOOLKIT.url} element={<ReduxToolkit />} />
+          <Route path={LIBRARY_PAGES.SWR.url} element={<Swr />} />
+          <Route path={LIBRARY_PAGES.AUTO_SUGGEST.url} element={<AutoSuggest />} />
+          <Route path={LIBRARY_PAGES.LOADING.url} element={<LoadingTest />} />
+          <Route path={LIBRARY_PAGES.MODAL.url} element={<ModalTest />} />
+          <Route path={LIBRARY_PAGES.FORM.url} element={<ReactHookForm />} />
+          <Route
+            path={CUSTOM_COMPONENT_PAGES.ONETIME_PASSWORD.url}
+            element={<OnetimePasswordTest />}
+          />
           {/* Public */}
 
           {/* Guest */}
           <Route
-            path="/sign_in"
+            path={AUTH_PAGES.SIGN_IN.url}
             element={
               <RouteAuthGuard component={<SignIn />} redirect={'/my_page'} type={PAGE_TYPE.GUEST} />
             }
@@ -59,15 +71,15 @@ const Router: FC = () => {
 
           {/* Private */}
           <Route
-            path="/my_page"
+            path={AUTH_PAGES.SIGN_OUT.url}
             element={
-              <RouteAuthGuard component={<MyPage />} redirect={'/'} type={PAGE_TYPE.PRIVATE} />
+              <RouteAuthGuard component={<SignOut />} redirect={'/'} type={PAGE_TYPE.PRIVATE} />
             }
           />
           <Route
-            path="/sign_out"
+            path={AUTH_PAGES.MY_PAGE.url}
             element={
-              <RouteAuthGuard component={<SignOut />} redirect={'/'} type={PAGE_TYPE.PRIVATE} />
+              <RouteAuthGuard component={<MyPage />} redirect={'/'} type={PAGE_TYPE.PRIVATE} />
             }
           />
           {/* Private */}

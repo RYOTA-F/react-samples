@@ -6,9 +6,14 @@ import reset from 'styled-reset'
  */
 export const GlobalStyle = createGlobalStyle`
   ${reset}
+
+  h1 {
+    font-size: 30px;
+    font-weight: bold;
+  }
 `
 
 export const AppContainer = style.div`
   text-align: center;
-  margin-top: 15rem;
+  margin-top: 20rem;
 `
