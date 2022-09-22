@@ -4,8 +4,7 @@ import RecoilizeDebugger from 'recoilize'
 /* router */
 import Router from './router'
 /* styles */
-import GlobalStyle from './Global.style'
-import { AppContainer } from './App.style'
+import { GlobalStyle, AppContainer } from './App.style'
 
 const App: FC = () => {
   return (
