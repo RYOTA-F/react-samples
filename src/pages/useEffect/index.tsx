@@ -1,4 +1,7 @@
 import { FC, useState, useEffect } from 'react'
+/* components */
+import PageTitle from '../../components/pageTitle'
+/* types */
 import { Jsonplaceholder } from '../../types/jsonplaceholder'
 
 const UseEffect: FC = () => {
@@ -16,7 +19,7 @@ const UseEffect: FC = () => {
 
   return (
     <>
-      <h1>UseEffect</h1>
+      <PageTitle title="UseEffect" />
       {data?.map((v, i) => (
         <div key={i}>
           userId: {v.userId}

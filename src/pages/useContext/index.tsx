@@ -1,5 +1,7 @@
 import { FC, createContext } from 'react'
+/* components */
 import UseContextChild from './useContextChild'
+import PageTitle from '../../components/pageTitle'
 
 const sample = 'Sample Context'
 export const SampleContext = createContext(sample)
@@ -7,7 +9,7 @@ export const SampleContext = createContext(sample)
 const UseContext: FC = () => {
   return (
     <>
-      <h1>UseContext</h1>
+      <PageTitle title="UseContext" />
       <SampleContext.Provider value={sample}>
         <UseContextChild />
       </SampleContext.Provider>

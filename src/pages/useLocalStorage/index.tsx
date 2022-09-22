@@ -1,4 +1,7 @@
 import { FC } from 'react'
+/* components */
+import PageTitle from '../../components/pageTitle'
+/* libs */
 import useLocalStorage from '../../lib/hooks/useLocalStorage'
 
 const UseLocalStorage: FC = () => {
@@ -6,7 +9,7 @@ const UseLocalStorage: FC = () => {
 
   return (
     <>
-      <h1>LocalStorage</h1>
+      <PageTitle title="LocalStorage" />
       <div>{value}</div>
       <div>
         <button onClick={() => setValue(value + 1)}>+</button>

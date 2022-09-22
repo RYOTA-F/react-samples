@@ -1,6 +1,7 @@
 import { FC, useEffect } from 'react'
 /* components */
 import Loading from '../../components/loading'
+import PageTitle from '../../components/pageTitle'
 
 const LoadingTest: FC = () => {
   const { RenderLoading, isLoading, setIsLoading } = Loading()
@@ -14,7 +15,7 @@ const LoadingTest: FC = () => {
 
   return (
     <>
-      <h1>LoadingTest</h1>
+      <PageTitle title="LoadingTest" />
       <button onClick={() => setIsLoading(true)}>Change Loading</button>
       <RenderLoading />
     </>

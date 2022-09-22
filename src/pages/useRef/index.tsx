@@ -1,5 +1,7 @@
 import { FC, useState } from 'react'
 import usePrevious from './usePrevious'
+/* components */
+import PageTitle from '../../components/pageTitle'
 
 const UseRef: FC = () => {
   const [count, setCount] = useState(0)
@@ -7,9 +9,10 @@ const UseRef: FC = () => {
 
   return (
     <div>
-      <h1>
+      <PageTitle title="useRef" />
+      <div>
         Now: {count}, before: {prevCount}
-      </h1>
+      </div>
       <button onClick={() => setCount(count + 1)}>Increment</button>
     </div>
   )

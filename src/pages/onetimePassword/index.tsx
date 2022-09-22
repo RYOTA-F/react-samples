@@ -1,6 +1,7 @@
 import { FC } from 'react'
 /* components */
 import OnetimePassword from '../../components/onetimePassword'
+import PageTitle from '../../components/pageTitle'
 /* libs */
 import { createRandomNumber } from '../../lib/onetimePassword'
 
@@ -9,7 +10,7 @@ const OnetimePasswordTest: FC = () => {
 
   return (
     <>
-      <h1>OnetimePassword</h1>
+      <PageTitle title="OnetimePassword" />
       <p>OnetimePass: {rundomNumber}</p>
       <hr />
       <OnetimePassword onetimePassword={rundomNumber} />

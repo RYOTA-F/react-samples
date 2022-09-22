@@ -1,10 +1,12 @@
 import { FC } from 'react'
+/* components */
 import SignOutButton from '../../components/signOutButton'
+import PageTitle from '../../components/pageTitle'
 
 const SignOut: FC = () => {
   return (
     <>
-      <h1>SignOut</h1>
+      <PageTitle title="SignOut" />
       <SignOutButton />
     </>
   )

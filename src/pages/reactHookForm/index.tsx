@@ -1,6 +1,7 @@
 import { FC, useState } from 'react'
 /* components */
 import Form from '../../components/form'
+import PageTitle from '../../components/pageTitle'
 
 export type Data = {
   data: {
@@ -21,7 +22,7 @@ const ReactHookForm: FC = () => {
 
   return (
     <>
-      <h1>ReactHookForm</h1>
+      <PageTitle title="ReactHookForm" />
       <p>
         Name: {data.data.firstName} {data.data.lastName}
       </p>

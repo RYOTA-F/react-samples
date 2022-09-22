@@ -1,10 +1,12 @@
 import { FC } from 'react'
+/* components */
 import UserInfo from '../../components/userInfo'
+import PageTitle from '../../components/pageTitle'
 
 const MyPage: FC = () => {
   return (
     <>
-      <h1>MyPage</h1>
+      <PageTitle title="MyPage" />
       <UserInfo />
     </>
   )

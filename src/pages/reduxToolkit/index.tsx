@@ -1,13 +1,16 @@
 import { FC } from 'react'
-import ReduxToolkitChild from './child'
-import { store } from './counter.store'
 import { Provider } from 'react-redux'
+/* components */
+import ReduxToolkitChild from './child'
+import PageTitle from '../../components/pageTitle'
+/* redux */
+import { store } from './counter.store'
 
 const ReduxToolkit: FC = () => {
   return (
     <>
       <Provider store={store}>
-        <h1>ReduxToolkit</h1>
+        <PageTitle title="ReduxToolkit" />
         <hr />
         <ReduxToolkitChild />
       </Provider>

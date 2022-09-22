@@ -1,5 +1,8 @@
 import { FC, useState } from 'react'
+/* components */
 import AutoSuggestEmailForm from '../../components/autoSuggestEmailForm'
+import PageTitle from '../../components/pageTitle'
+/* constants */
 import { EMAIL_DOMAIN_LIST } from '../../constants/domain'
 
 const AutoSuggest: FC = () => {
@@ -7,7 +10,7 @@ const AutoSuggest: FC = () => {
 
   return (
     <>
-      <h1>AutoSuggest</h1>
+      <PageTitle title="AutoSuggest" />
       <AutoSuggestEmailForm
         inputValue={input}
         setInputValue={setInput}
