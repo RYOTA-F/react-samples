@@ -8,21 +8,23 @@ import Footer from './components/footer'
 /* router */
 import Router from './router'
 /* styles */
-import { GlobalStyle, AppContainer } from './App.style'
+import { GlobalStyle, AppContainer, PagesContainer } from './App.style'
 import APP_THEME from './Theme.style'
 
 const App: FC = () => {
   return (
     <AppContainer>
-      <RecoilRoot>
-        <RecoilizeDebugger />
-        <GlobalStyle />
-        <ThemeProvider theme={APP_THEME}>
+      <GlobalStyle />
+      <ThemeProvider theme={APP_THEME}>
+        <RecoilRoot>
+          <RecoilizeDebugger />
           <HeaderAndSidebar />
-          <Router />
+          <PagesContainer>
+            <Router />
+          </PagesContainer>
           <Footer />
-        </ThemeProvider>
-      </RecoilRoot>
+        </RecoilRoot>
+      </ThemeProvider>
     </AppContainer>
   )
 }

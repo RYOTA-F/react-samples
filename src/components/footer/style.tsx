@@ -1,8 +1,6 @@
 import style from 'styled-components'
 
 export const Container = style.div`
-  position: absolute;
-  bottom: 0;
   height: 60px;
   width: 100%;
   color: #fff;
