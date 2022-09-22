@@ -6,7 +6,7 @@ export const Container = style.div`
   height: 60px;
   width: 100%;
   color: #fff;
-  background: #2f73bf;
+  background: #4c6cb3;
 `
 
 export const Title = style.div`
