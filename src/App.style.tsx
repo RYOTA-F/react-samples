@@ -15,6 +15,11 @@ export const AppContainer = style.div`
     font-size: 30px;
     font-weight: bold;
   }
+
+  h2 {
+    font-size: 20px;
+    font-weight: bold;
+  }
 `
 
 export const PagesContainer = style.div`
