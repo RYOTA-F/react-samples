@@ -1,5 +1,6 @@
 import { FC, useState } from 'react'
 /* components */
+import Button from '../../components/button'
 import PageTitle from '../../components/pageTitle'
 
 const UseState: FC = () => {
@@ -8,9 +9,10 @@ const UseState: FC = () => {
   return (
     <>
       <PageTitle title="useState" />
+      <div>Counter</div>
       <div>{count}</div>
-      <button onClick={() => setCount(count + 1)}>+</button>
-      <button onClick={() => setCount(count - 1)}>-</button>
+      <Button childlen="+" onClick={() => setCount(count + 1)} margin={20} />
+      <Button childlen="-" onClick={() => setCount(count - 1)} margin={20} />
     </>
   )
 }
