@@ -9,7 +9,7 @@ const UseContextChild: FC = () => {
 
   return (
     <Container>
-      <h2>Child Page</h2>
+      <h2>Child Component</h2>
       <br />
       {'useContext(SampleContext) ->'}
       <ContextText>{sample}</ContextText>
