@@ -8,10 +8,10 @@ export const Container = style.button<ContainerProps>`
   height: ${(props) => props.height}px;
   width: ${(props) => props.width}px;
   margin: ${(props) => props.margin}px;
-  marginTop: ${(props) => props.marginTop}px;
-  marginBottom: ${(props) => props.marginBottom}px;
-  marginLeft: ${(props) => props.marginLeft}px;
-  marginRight: ${(props) => props.marginRight}px;
+  margin-top: ${(props) => (props.margin ? props.margin : props.marginTop)}px;
+  margin-bottom: ${(props) => (props.margin ? props.margin : props.marginBottom)}px;
+  margin-left: ${(props) => (props.margin ? props.margin : props.marginLeft)}px;
+  margin-right: ${(props) => (props.margin ? props.margin : props.marginRight)}px;
   color: ${(props) => props.theme.colors.white};
   border: none;
   border-radius: 10px;
