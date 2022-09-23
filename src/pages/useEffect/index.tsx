@@ -1,6 +1,8 @@
 import { FC, useState, useEffect } from 'react'
 /* components */
 import PageTitle from '../../components/pageTitle'
+/* styles */
+import { FetchSample, DataItem, UserData, MainData, Contents } from './style'
 /* types */
 import { Jsonplaceholder } from '../../types/jsonplaceholder'
 
@@ -20,13 +22,29 @@ const UseEffect: FC = () => {
   return (
     <>
       <PageTitle title="UseEffect" />
+      <FetchSample>
+        Fetch API:{' '}
+        <a href="https://jsonplaceholder.typicode.com/posts" target="_brank">
+          https://jsonplaceholder.typicode.com/posts
+        </a>
+      </FetchSample>
       {data?.map((v, i) => (
-        <div key={i}>
-          userId: {v.userId}
-          id: {v.id}
-          title: {v.title}
-          body: {v.body}
-        </div>
+        <DataItem key={i}>
+          <UserData>
+            User Id: <Contents>{v.userId}</Contents>
+          </UserData>
+          <UserData>
+            Id: <Contents>{v.id}</Contents>
+          </UserData>
+          <MainData>
+            <div>
+              Title: <Contents>{v.title}</Contents>
+            </div>
+            <div>
+              Body: <Contents>{v.body}</Contents>
+            </div>
+          </MainData>
+        </DataItem>
       ))}
     </>
   )
