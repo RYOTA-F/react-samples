@@ -4,6 +4,8 @@ import useSWR from 'swr'
 import PageTitle from '../../components/pageTitle'
 /* libs */
 import fetcher from '../../lib/fetch'
+/* styles */
+import { FetchSample, DataItem, UserData, Contents, MainData } from './style'
 /* types */
 import { Jsonplaceholder } from '../../types/jsonplaceholder'
 
@@ -16,14 +18,31 @@ const Swr: FC = () => {
   return (
     <>
       <PageTitle title="Swr" />
+      <FetchSample>
+        Fetch API:{' '}
+        <a href="https://jsonplaceholder.typicode.com/posts" target="_brank">
+          https://jsonplaceholder.typicode.com/posts
+        </a>
+      </FetchSample>
+
       {error && <div>Error: {error}</div>}
       {data?.map((v, i) => (
-        <div key={i}>
-          userId: {v.userId}
-          id: {v.id}
-          title: {v.title}
-          body: {v.body}
-        </div>
+        <DataItem key={i}>
+          <UserData>
+            User ID: <Contents>{v.userId}</Contents>
+          </UserData>
+          <UserData>
+            ID: <Contents>{v.id}</Contents>
+          </UserData>
+          <MainData>
+            <div>
+              Title: <Contents>{v.title}</Contents>
+            </div>
+            <div>
+              Body: <Contents>{v.body}</Contents>
+            </div>
+          </MainData>
+        </DataItem>
       ))}
     </>
   )
