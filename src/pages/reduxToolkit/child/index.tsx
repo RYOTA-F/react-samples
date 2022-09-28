@@ -1,31 +1,43 @@
 import { FC } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
+/* components */
+import Button from '../../../components/button'
+/* store */
 import type { RootState } from '../counter.store'
 import { decrement, increment } from '../counter.slice'
+/* styles */
+import { Container, Counter, Count } from './style'
 
 const ReduxToolkitChild: FC = () => {
   const count = useSelector((state: RootState) => state.counter.value)
   const dispatch = useDispatch()
 
   return (
-    <>
+    <Container>
       <h2>ReduxToolkitChild</h2>
       <div>
-        <button
-          style={{ width: '200px', height: '50px', margin: '20px' }}
+        <Button
+          childlen="Increment"
+          colorType="sub"
+          width={200}
+          height={50}
+          margin={20}
           onClick={() => dispatch(increment())}
-        >
-          Increment
-        </button>
-        <span>{count}</span>
-        <button
-          style={{ width: '200px', height: '50px', margin: '20px' }}
+        />
+        <Counter>
+          Count:
+          <Count>{count}</Count>
+        </Counter>
+        <Button
+          childlen="Decrement"
+          colorType="sub"
+          width={200}
+          height={50}
+          margin={20}
           onClick={() => dispatch(decrement())}
-        >
-          Decrement
-        </button>
+        />
       </div>
-    </>
+    </Container>
   )
 }
 
