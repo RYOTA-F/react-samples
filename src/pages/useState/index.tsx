@@ -13,8 +13,8 @@ const UseState: FC = () => {
       <PageTitle title="useState" />
       <div>Counter</div>
       <Count>{count}</Count>
-      <Button childlen="+" onClick={() => setCount(count + 1)} margin={20} />
-      <Button childlen="-" onClick={() => setCount(count - 1)} margin={20} />
+      <Button childlen="+" colorType="sub" onClick={() => setCount(count + 1)} margin={20} />
+      <Button childlen="-" colorType="sub" onClick={() => setCount(count - 1)} margin={20} />
     </>
   )
 }

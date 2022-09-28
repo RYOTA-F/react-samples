@@ -16,8 +16,8 @@ const UseReducer: FC = () => {
       <PageTitle title="UseReducer" />
       Count: <Content>{state.count}</Content>
       <div>
-        <Button childlen="+" onClick={() => dispach({ type: 'add' })} margin={10} />
-        <Button childlen="-" onClick={() => dispach({ type: 'sub' })} margin={10} />
+        <Button childlen="+" colorType="sub" onClick={() => dispach({ type: 'add' })} margin={10} />
+        <Button childlen="-" colorType="sub" onClick={() => dispach({ type: 'sub' })} margin={10} />
       </div>
       <hr />
       <br />
@@ -28,6 +28,7 @@ const UseReducer: FC = () => {
         <Input value={input} setValue={setInput} />
         <Button
           childlen="Change Text"
+          colorType="sub"
           onClick={() => dispach({ type: 'change', text: input })}
           width={200}
           height={30}

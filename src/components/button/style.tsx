@@ -22,6 +22,10 @@ export const Container = style.button<ContainerProps>`
     switch (props.colorType) {
       case 'main':
         return props.theme.colors.main
+      case 'sub':
+        return props.theme.colors.sub
+      case 'silver':
+        return props.theme.colors.silver
       default:
         return props.theme.colors.main
     }

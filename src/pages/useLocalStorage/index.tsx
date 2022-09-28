@@ -14,9 +14,9 @@ const UseLocalStorage: FC = () => {
     <>
       <PageTitle title="LocalStorage" />
       <Count>{value}</Count>
-      <Button childlen="+" onClick={() => setValue(value + 1)} />
-      <Button childlen="Clear" onClick={() => setValue(0)} marginLeft={20} />
-      <Button childlen="-" onClick={() => setValue(value - 1)} marginLeft={20} />
+      <Button childlen="+" colorType="sub" onClick={() => setValue(value + 1)} />
+      <Button childlen="Clear" colorType="silver" onClick={() => setValue(0)} marginLeft={20} />
+      <Button childlen="-" colorType="sub" onClick={() => setValue(value - 1)} marginLeft={20} />
     </>
   )
 }

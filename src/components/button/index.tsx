@@ -2,7 +2,7 @@ import { FC, ReactNode } from 'react'
 /* styles */
 import { Container } from './style'
 
-type ColorType = 'main'
+type ColorType = 'main' | 'sub' | 'silver'
 
 export type ButtonProps = {
   colorType?: ColorType
