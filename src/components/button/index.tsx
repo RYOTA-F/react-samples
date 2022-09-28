@@ -8,6 +8,7 @@ type ColorType = 'main' | 'sub' | 'silver'
 export type ButtonProps = {
   buttonType?: ButtonType
   colorType?: ColorType
+  disabled?: boolean
   childlen: ReactNode
   onClick?: () => void
   height?: number
@@ -22,6 +23,7 @@ export type ButtonProps = {
 const Button: FC<ButtonProps> = ({
   buttonType = 'button',
   colorType = 'main',
+  disabled = false,
   childlen,
   onClick,
   height = 50,
@@ -35,7 +37,8 @@ const Button: FC<ButtonProps> = ({
   return (
     <Container
       type={buttonType}
-      colorType={colorType}
+      colorType={disabled ? 'silver' : colorType}
+      disabled={disabled}
       onClick={onClick}
       height={height}
       width={width}
