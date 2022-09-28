@@ -73,7 +73,7 @@ const Form: FC<FormProps> = ({ setData }) => {
       </FormLabel>
       {errors.email && <FormError>入力されていません</FormError>}
 
-      <Button childlen="Submit" buttonType="submit" />
+      <Button childlen="Submit" buttonType="submit" colorType="sub" />
     </FormContainer>
   )
 }
