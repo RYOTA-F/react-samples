@@ -21,6 +21,7 @@ export const LIBRARY_PAGES = {
   LOADING: { url: '/loading', title: 'react-loading' },
   MODAL: { url: '/modal', title: 'react-modal' },
   FORM: { url: '/form', title: 'react-hook-form' },
+  SYNTAX_HIGHLIGHTER: { url: '/syntax-hignlighter', title: 'react-syntax-hignlighter' },
 } as const
 
 export const CUSTOM_COMPONENT_PAGES = {

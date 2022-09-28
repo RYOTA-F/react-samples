@@ -25,6 +25,7 @@ import AutoSuggest from '../pages/autoSuggest'
 import LoadingTest from '../pages/loading'
 import ModalTest from '../pages/modal'
 import ReactHookForm from '../pages/reactHookForm'
+import ReactSyntaxHighlighter from '../pages/reactSyntaxHighlighter'
 import OnetimePasswordTest from '../pages/onetimePassword'
 import MyPage from '../pages/myPage'
 import SignIn from '../pages/signIn'
@@ -54,6 +55,7 @@ const Router: FC = () => {
           <Route path={LIBRARY_PAGES.LOADING.url} element={<LoadingTest />} />
           <Route path={LIBRARY_PAGES.MODAL.url} element={<ModalTest />} />
           <Route path={LIBRARY_PAGES.FORM.url} element={<ReactHookForm />} />
+          <Route path={LIBRARY_PAGES.SYNTAX_HIGHLIGHTER.url} element={<ReactSyntaxHighlighter />} />
           <Route
             path={CUSTOM_COMPONENT_PAGES.ONETIME_PASSWORD.url}
             element={<OnetimePasswordTest />}
