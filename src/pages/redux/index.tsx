@@ -10,7 +10,6 @@ const Redux: FC = () => {
   return (
     <Provider store={store}>
       <PageTitle title="Redux" />
-      <hr />
       <ReduxChild />
     </Provider>
   )
