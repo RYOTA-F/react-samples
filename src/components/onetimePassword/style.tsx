@@ -58,26 +58,3 @@ export const Alert = style.div`
 export const AlertMessage = style.div`
   margin-left: 2px;
 `
-
-export const Button = style.button`
-  display: block;
-  margin: 48px auto 0;
-  padding: 10px 12px;
-  background-color: #1473e6;
-  border-radius: 4px;
-  font-size: 1.4rem;
-  line-height: 2.1rem;
-  color: #ffffff;
-`
-
-export const ButtonUnclickable = style.button`
-  display: block;
-  margin: 48px auto 0;
-  margin-top: 48px;
-  padding: 10px 12px;
-  background-color: #cfd4dc;
-  border-radius: 4px;
-  font-size: 1.4rem;
-  line-height: 2.1rem;
-  color: #888888;
-`

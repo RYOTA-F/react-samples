@@ -1,22 +1,15 @@
 import { FC, useState } from 'react'
+/* components */
+import Button from '../button'
 /* styles */
-import {
-  Form,
-  FormItem,
-  FormHyphen,
-  Input,
-  InputAlert,
-  Alert,
-  AlertMessage,
-  Button,
-  ButtonUnclickable,
-} from './style'
+import { Form, FormItem, FormHyphen, Input, InputAlert, Alert, AlertMessage } from './style'
 
 export type OnetimePasswordProp = {
   onetimePassword: number
+  submitAction?: (value: boolean) => void
 }
 
-const OnetimePassword: FC<OnetimePasswordProp> = ({ onetimePassword }) => {
+const OnetimePassword: FC<OnetimePasswordProp> = ({ onetimePassword, submitAction }) => {
   const CODE_DIGIT = 6
   const initCode = [...Array(CODE_DIGIT)].map((v) => '')
 
@@ -72,9 +65,10 @@ const OnetimePassword: FC<OnetimePasswordProp> = ({ onetimePassword }) => {
    * 認証ボタンをクリック
    */
   const handleClickCertification = async (): Promise<void> => {
-    if (code.some((v) => !v)) return
+    if (code.some((v) => !v) || !submitAction) return
 
     const value = code.join('')
+    if (onetimePassword === Number(value)) submitAction(true)
     if (onetimePassword !== Number(value)) setIsAuthenticationError(true)
   }
 
@@ -114,9 +108,9 @@ const OnetimePassword: FC<OnetimePasswordProp> = ({ onetimePassword }) => {
       )}
 
       {code.some((v) => !v) ? (
-        <Button>認証</Button>
+        <Button childlen="未入力" disabled={true} marginTop={100} />
       ) : (
-        <ButtonUnclickable onClick={handleClickCertification}>認証</ButtonUnclickable>
+        <Button childlen="認証" onClick={handleClickCertification} marginTop={100} />
       )}
     </>
   )
