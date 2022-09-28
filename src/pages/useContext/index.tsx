@@ -13,7 +13,7 @@ const UseContext: FC = () => {
     <>
       <PageTitle title="UseContext" />
       <Container>
-        <h2>Palent Component</h2>
+        <h2>Parent Component</h2>
         <SampleContext.Provider value={sample}>
           <UseContextChild />
         </SampleContext.Provider>

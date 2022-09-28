@@ -14,7 +14,7 @@ const ReduxToolkit: FC = () => {
       <Provider store={store}>
         <PageTitle title="ReduxToolkit" />
         <Container>
-          <h2>Parent Page</h2>
+          <h2>Parent Component</h2>
           <ReduxToolkitChild />
         </Container>
       </Provider>

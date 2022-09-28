@@ -6,7 +6,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { incrementCounter, decrementCounter } from '../counter.action'
 import type { RootState } from '../counter.store'
 /* styles */
-import { Counter, Count } from './style'
+import { Container, Counter, Count } from './style'
 
 const ReduxChild: FC = () => {
   const dispatch = useDispatch()
@@ -21,8 +21,8 @@ const ReduxChild: FC = () => {
   }, [dispatch])
 
   return (
-    <>
-      <h2>ReduxChild</h2>
+    <Container>
+      <h2>Child Component</h2>
       <Button
         childlen="Increment"
         colorType="sub"
@@ -42,7 +42,7 @@ const ReduxChild: FC = () => {
         margin={20}
         onClick={handleClickDecrement}
       />
-    </>
+    </Container>
   )
 }
 

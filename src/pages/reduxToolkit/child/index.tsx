@@ -14,7 +14,7 @@ const ReduxToolkitChild: FC = () => {
 
   return (
     <Container>
-      <h2>ReduxToolkitChild</h2>
+      <h2>Child Component</h2>
       <div>
         <Button
           childlen="Increment"
