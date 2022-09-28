@@ -1,5 +1,7 @@
 import { Dispatch, FC, SetStateAction } from 'react'
 import { useForm } from 'react-hook-form'
+/* components */
+import Button from '../../components/button'
 /* constants */
 import { EMAIL_DOMAIN_LIST } from '../../constants/domain'
 /* styles */
@@ -35,11 +37,9 @@ const Form: FC<FormProps> = ({ setData }) => {
 
   const onClickSubmit = (data: FormType) => {
     setData({
-      data: {
-        firstName: data.firstName,
-        lastName: data.lastName,
-        email: data.email + data.domain,
-      },
+      firstName: data.firstName,
+      lastName: data.lastName,
+      email: data.email + data.domain,
     })
   }
 
@@ -70,7 +70,7 @@ const Form: FC<FormProps> = ({ setData }) => {
       </FormLabel>
       {errors.email && <FormError>入力されていません</FormError>}
 
-      <FormSubmit type="submit" />
+      <Button childlen="Submit" buttonType="submit" />
     </FormContainer>
   )
 }

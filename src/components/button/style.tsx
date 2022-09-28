@@ -2,7 +2,7 @@ import style from 'styled-components'
 /* types */
 import { ButtonProps } from './index'
 
-type ContainerProps = Omit<Required<ButtonProps>, 'childlen' | 'onClick'>
+type ContainerProps = Omit<Required<ButtonProps>, 'buttonType' | 'childlen' | 'onClick'>
 
 export const Container = style.button<ContainerProps>`
   height: ${(props) => props.height}px;
