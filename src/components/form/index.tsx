@@ -8,10 +8,11 @@ import { EMAIL_DOMAIN_LIST } from '../../constants/domain'
 import {
   FormContainer,
   FormLabel,
+  FormLabelText,
   FormInput,
+  FormEmpty,
   FormSelect,
   FormOption,
-  FormSubmit,
   FormError,
 } from './style'
 /* types */
@@ -39,26 +40,28 @@ const Form: FC<FormProps> = ({ setData }) => {
     setData({
       firstName: data.firstName,
       lastName: data.lastName,
-      email: data.email + data.domain,
+      email: data.email + '@' + data.domain,
     })
   }
 
   return (
     <FormContainer onSubmit={handleSubmit(onClickSubmit)}>
       <FormLabel>
-        First Name: {''}
+        <FormLabelText>Name: </FormLabelText>
         <FormInput {...register('firstName', { required: true })} />
+        <FormEmpty />
       </FormLabel>
       {errors.firstName && <FormError>入力されていません</FormError>}
 
       <FormLabel>
-        Last Name: {''}
+        <FormLabelText>Last Name: </FormLabelText>
         <FormInput {...register('lastName', { required: true })} />
+        <FormEmpty />
       </FormLabel>
       {errors.lastName && <FormError>入力されていません</FormError>}
 
       <FormLabel>
-        Email: {''}
+        <FormLabelText>Email: </FormLabelText>
         <FormInput {...register('email', { required: true })} />
         <FormSelect {...register('domain')}>
           {EMAIL_DOMAIN_LIST.map((v, i) => (
