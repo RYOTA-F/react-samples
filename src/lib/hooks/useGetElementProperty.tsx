@@ -1,0 +1,23 @@
+import { useCallback, RefObject } from 'react'
+
+type DOMRectProperty = keyof Omit<DOMRect, 'toJSON'>
+
+const useGetElementProperty = <T extends HTMLElement>(elementRef: RefObject<T>) => {
+  const getElementProperty = useCallback(
+    (targetProperty: DOMRectProperty): number => {
+      const clientRect = elementRef.current?.getBoundingClientRect()
+      if (clientRect) {
+        return clientRect[targetProperty]
+      }
+
+      return 0
+    },
+    [elementRef]
+  )
+
+  return {
+    getElementProperty,
+  }
+}
+
+export default useGetElementProperty
