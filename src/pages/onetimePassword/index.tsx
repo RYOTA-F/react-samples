@@ -1,4 +1,4 @@
-import { FC, useState } from 'react'
+import { FC, useState, useMemo } from 'react'
 /* components */
 import OnetimePassword from '../../components/onetimePassword'
 import PageTitle from '../../components/pageTitle'
@@ -10,7 +10,7 @@ import { Sample, SumpleNumber } from './style'
 const OnetimePasswordTest: FC = () => {
   const [isMatchPass, setIsMatchPass] = useState(false)
 
-  const rundomNumber = createRandomNumber(100000, 999999)
+  const rundomNumber = useMemo(() => createRandomNumber(100000, 999999), [])
 
   const submitAction = (value: boolean) => {
     setIsMatchPass(value)
