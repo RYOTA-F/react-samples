@@ -45,11 +45,11 @@ const Router: FC = () => {
         {/* Public */}
         <Routes>
           <Route index element={<Home />} />
-          <Route path={HOOKS_PAGES.USR_STATE.url} element={<UseState />} />
+          <Route path={HOOKS_PAGES.USE_STATE.url} element={<UseState />} />
           <Route path={HOOKS_PAGES.USE_EFFECT.url} element={<UseEffect />} />
           <Route path={HOOKS_PAGES.USE_CONTEXT.url} element={<UseContext />} />
-          <Route path={HOOKS_PAGES.USR_REDUCER.url} element={<UseReducer />} />
-          <Route path={HOOKS_PAGES.USR_REF.url} element={<UseRef />} />
+          <Route path={HOOKS_PAGES.USE_REDUCER.url} element={<UseReducer />} />
+          <Route path={HOOKS_PAGES.USE_REF.url} element={<UseRef />} />
           <Route path={CUSTOM_HOOK_PAGES.USE_LOCAL_STORAGE.url} element={<UseLocalStorage />} />
           <Route path={GLOBAL_STATE_PAGES.REDUX.url} element={<Redux />} />
           <Route path={GLOBAL_STATE_PAGES.REDUX_TOOLKIT.url} element={<ReduxToolkit />} />

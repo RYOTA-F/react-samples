@@ -1,9 +1,9 @@
 export const HOOKS_PAGES = {
-  USR_STATE: { url: '/use_state', title: 'useState' },
+  USE_STATE: { url: '/use_state', title: 'useState' },
   USE_EFFECT: { url: '/use_effect', title: 'useEffect' },
   USE_CONTEXT: { url: '/use_context', title: 'useContext' },
-  USR_REDUCER: { url: '/use_reducer', title: 'useReducer' },
-  USR_REF: { url: '/use_ref', title: 'useRef' },
+  USE_REDUCER: { url: '/use_reducer', title: 'useReducer' },
+  USE_REF: { url: '/use_ref', title: 'useRef' },
 } as const
 
 export const CUSTOM_HOOK_PAGES = {
