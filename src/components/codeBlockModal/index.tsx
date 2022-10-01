@@ -18,7 +18,8 @@ const CodeBlockModal: FC = () => {
       <ModalOpenButton onClick={() => setIsViewModal(!isViewModal)}>{'< / >'}</ModalOpenButton>
       {isViewModal && (
         <RenderModal>
-          {src && <SyntaxHighlighter code={src.code} fileName={src.fileName} />}
+          {src &&
+            src.map((v, i) => <SyntaxHighlighter key={i} code={v.code} fileName={v.fileName} />)}
         </RenderModal>
       )}
     </>
