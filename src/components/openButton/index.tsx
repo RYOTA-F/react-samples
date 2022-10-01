@@ -1,12 +1,12 @@
 import { FC, Dispatch, SetStateAction } from 'react'
 import { Conteinr, Span1, Span2, Span3 } from './style'
 
-type OpenButton = {
+type OpenButtonProps = {
   isOpen: boolean
   setIsOpen: Dispatch<SetStateAction<boolean>>
 }
 
-const OpenButton: FC<OpenButton> = ({ isOpen, setIsOpen }) => {
+const OpenButton: FC<OpenButtonProps> = ({ isOpen, setIsOpen }) => {
   return (
     <Conteinr onClick={() => setIsOpen(!isOpen)}>
       <Span1 isOpen={isOpen} />

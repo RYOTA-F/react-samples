@@ -1,6 +1,6 @@
 import style from 'styled-components'
 
-export const OpenButton = style.button`
+export const ModalOpenButton = style.button`
   position: absolute;
   top: 0;
   right: 0;
