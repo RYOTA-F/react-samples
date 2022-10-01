@@ -11,14 +11,14 @@ import { ModalOpenButton } from './style'
 const CodeBlockModal: FC = () => {
   const { RenderModal, isViewModal, setIsViewModal } = Modal()
   const location = useLocation()
-  const code = getCodeByLocation(location)
+  const src = getCodeByLocation(location)
 
   return (
     <>
       <ModalOpenButton onClick={() => setIsViewModal(!isViewModal)}>{'< / >'}</ModalOpenButton>
       {isViewModal && (
         <RenderModal>
-          <SyntaxHighlighter code={code ? code : ''} />
+          {src && <SyntaxHighlighter code={src.code} fileName={src.fileName} />}
         </RenderModal>
       )}
     </>

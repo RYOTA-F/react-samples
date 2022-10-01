@@ -1,6 +1,6 @@
 import { Location } from 'react-router-dom'
 /* constants */
-import { SAMPLE_SRCS } from '../../constants/sampleSrc'
+import { SAMPLE_SRC_SET } from '../../constants/sampleSrc'
 import { ALL_PAGES, ALL_PAGE_LIST } from '../../constants/pages'
 
 export const getCodeByLocation = (location?: Location) => {
@@ -10,10 +10,10 @@ export const getCodeByLocation = (location?: Location) => {
 
   switch (currentPath) {
     case ALL_PAGES.USR_STATE.url:
-      return SAMPLE_SRCS.USE_STATE_CODE
+      return SAMPLE_SRC_SET.USE_STATE
     case ALL_PAGES.USE_EFFECT.url:
-      return SAMPLE_SRCS.USE_EFFECT_CODE
+      return SAMPLE_SRC_SET.USE_EFFECT
     default:
-      return ''
+      return { code: '', fileName: '' }
   }
 }

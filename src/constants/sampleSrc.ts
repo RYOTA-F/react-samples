@@ -1,4 +1,7 @@
-export const USE_STATE_CODE = `import { FC, useState } from 'react'
+const USE_STATE = {
+  fileName: '/src/pages/useState/index.tsx',
+  code: `
+import { FC, useState } from 'react'
 /* components */
 import Button from '../../components/button'
 /* styles */
@@ -17,9 +20,13 @@ const UseState: FC = () => {
 }
 
 export default UseState
-`
+`,
+}
 
-export const USE_EFFECT_CODE = `import { FC, useState, useEffect } from 'react'
+export const USE_EFFECT = {
+  fileName: '/src/pages/useEffect/index.tsx',
+  code: `
+import { FC, useState, useEffect } from 'react'
 /* styles */
 import { FetchSample, DataItem, UserData, MainData, Contents } from './style'
 /* types */
@@ -62,9 +69,11 @@ const UseEffect: FC = () => {
   )
 }
 
-export default UseEffect`
+export default UseEffect
+`,
+}
 
-export const SAMPLE_SRCS = {
-  USE_STATE_CODE,
-  USE_EFFECT_CODE,
+export const SAMPLE_SRC_SET = {
+  USE_STATE,
+  USE_EFFECT,
 }
