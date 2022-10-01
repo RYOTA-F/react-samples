@@ -21,6 +21,8 @@ export const getCodeByLocation = (location?: Location) => {
       return SAMPLE_CODE.USE_REF_CODE
     case ALL_PAGES.USE_LOCAL_STORAGE.url:
       return SAMPLE_CODE.USE_LOCAL_STORAGE_CODE
+    case ALL_PAGES.SWR.url:
+      return SAMPLE_CODE.SWR_CODE
     default:
       return [{ code: '', fileName: '' }]
   }
