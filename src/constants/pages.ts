@@ -42,3 +42,14 @@ export const CUSTOM_COMPONENT_PAGE_LIST = Object.entries(CUSTOM_COMPONENT_PAGES)
   (page) => page[1]
 )
 export const AUTH_PAGE_LIST = Object.entries(AUTH_PAGES).map((page) => page[1])
+
+export const ALL_PAGES = {
+  ...HOOKS_PAGES,
+  ...CUSTOM_HOOK_PAGES,
+  ...GLOBAL_STATE_PAGES,
+  ...LIBRARY_PAGES,
+  ...CUSTOM_COMPONENT_PAGES,
+  ...AUTH_PAGES,
+}
+
+export const ALL_PAGE_LIST = Object.entries(ALL_PAGES).map((page) => page[1])

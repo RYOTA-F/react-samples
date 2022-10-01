@@ -1,5 +1,7 @@
 import { FC } from 'react'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom'
+/* components */
+import CodeBlockModal from '../components/codeBlockModal'
 /* constants */
 import {
   HOOKS_PAGES,
@@ -39,6 +41,7 @@ const Router: FC = () => {
   return (
     <>
       <BrowserRouter>
+        <CodeBlockModal />
         {/* Public */}
         <Routes>
           <Route index element={<Home />} />
