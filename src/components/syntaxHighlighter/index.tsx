@@ -14,7 +14,7 @@ const SyntaxHighlighter: FC<SyntaxHighlighterProps> = ({ code, fileName }) => {
     <Container>
       <Filename>{fileName}</Filename>
       <Prism language="typescript" style={dark}>
-        {code}
+        {`\n` + code}
       </Prism>
     </Container>
   )

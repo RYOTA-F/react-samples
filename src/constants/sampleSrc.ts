@@ -1,7 +1,6 @@
 const USE_STATE = {
   fileName: '/src/pages/useState/index.tsx',
-  code: `
-import { FC, useState } from 'react'
+  code: `import { FC, useState } from 'react'
 /* components */
 import Button from '../../components/button'
 /* styles */
@@ -25,8 +24,7 @@ export default UseState
 
 export const USE_EFFECT = {
   fileName: '/src/pages/useEffect/index.tsx',
-  code: `
-import { FC, useState, useEffect } from 'react'
+  code: `import { FC, useState, useEffect } from 'react'
 /* styles */
 import { FetchSample, DataItem, UserData, MainData, Contents } from './style'
 /* types */
