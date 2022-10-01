@@ -23,6 +23,8 @@ export const getCodeByLocation = (location?: Location) => {
       return SAMPLE_CODE.USE_LOCAL_STORAGE_CODE
     case ALL_PAGES.SWR.url:
       return SAMPLE_CODE.SWR_CODE
+    case ALL_PAGES.AUTO_SUGGEST.url:
+      return SAMPLE_CODE.REACT_AUTOSUGGEST_CODE
     default:
       return [{ code: '', fileName: '' }]
   }
