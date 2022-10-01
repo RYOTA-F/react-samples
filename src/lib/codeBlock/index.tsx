@@ -17,6 +17,8 @@ export const getCodeByLocation = (location?: Location) => {
       return SAMPLE_CODE.USE_CONTEXT_CODE
     case ALL_PAGES.USR_REDUCER.url:
       return SAMPLE_CODE.USE_REDUCER_CODE
+    case ALL_PAGES.USR_REF.url:
+      return SAMPLE_CODE.USE_REF_CODE
     default:
       return [{ code: '', fileName: '' }]
   }
