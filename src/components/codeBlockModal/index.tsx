@@ -1,4 +1,4 @@
-import { FC } from 'react'
+import { FC, useMemo } from 'react'
 import { useLocation } from 'react-router-dom'
 /* components */
 import Modal from '../modal'
@@ -11,7 +11,7 @@ import { ModalOpenButton } from './style'
 const CodeBlockModal: FC = () => {
   const { RenderModal, isViewModal, setIsViewModal } = Modal()
   const location = useLocation()
-  const src = getCodeByLocation(location)
+  const src = useMemo(() => getCodeByLocation(location), [])
 
   return (
     <>
