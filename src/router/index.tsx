@@ -1,5 +1,5 @@
 import { FC } from 'react'
-import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 /* components */
 import CodeBlockModal from '../components/codeBlockModal'
 /* constants */
@@ -28,7 +28,8 @@ import LoadingTest from '../pages/loading'
 import ModalTest from '../pages/modal'
 import ReactHookForm from '../pages/reactHookForm'
 import ReactSyntaxHighlighter from '../pages/reactSyntaxHighlighter'
-import OnetimePasswordTest from '../pages/onetimePassword'
+import OnetimePassword from '../pages/onetimePassword'
+import BalloonTooltip from '../pages/balloonTooltip'
 import MyPage from '../pages/myPage'
 import SignIn from '../pages/signIn'
 import SignOut from '../pages/signOut'
@@ -59,10 +60,8 @@ const Router: FC = () => {
           <Route path={LIBRARY_PAGES.MODAL.url} element={<ModalTest />} />
           <Route path={LIBRARY_PAGES.FORM.url} element={<ReactHookForm />} />
           <Route path={LIBRARY_PAGES.SYNTAX_HIGHLIGHTER.url} element={<ReactSyntaxHighlighter />} />
-          <Route
-            path={CUSTOM_COMPONENT_PAGES.ONETIME_PASSWORD.url}
-            element={<OnetimePasswordTest />}
-          />
+          <Route path={CUSTOM_COMPONENT_PAGES.ONETIME_PASSWORD.url} element={<OnetimePassword />} />
+          <Route path={CUSTOM_COMPONENT_PAGES.BALLOON_TOOLTIP.url} element={<BalloonTooltip />} />
           {/* Public */}
 
           {/* Guest */}

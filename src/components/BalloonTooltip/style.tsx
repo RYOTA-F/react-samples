@@ -14,13 +14,15 @@ const descriptionBottomStyle = `
 const descriptionLeftStyle = `
   top: 0;
   left: -50%;
-  transform: translateX(calc(50% - 22px)) translateY(-75%);
+  transform: translateX(calc(100% + 10px)) translateY(-70%);
+  -webkit-transform: translateX(calc(100% + 10px)) translateY(-70%);
 `
 
 const descriptionRightStyle = `
   top: 0;
   right: 50%;
-  transform: translateX(calc(-50% + 22px)) translateY(-75%);
+  transform: translateX(calc(-100% - 10px)) translateY(-75%);
+  -webkit-transform: translateX(calc(-100% - 10px)) translateY(-75%);
 `
 
 const triangleTopStyle = `
@@ -38,13 +40,15 @@ const triangleBottomStyle = `
 const triangleLeftStyle = `
   top: 0;
   left: -25%;
-  transform: translateX(11px) translateY(-150%) rotate(90deg);
+  transform: translateX(49px) translateY(-130%) rotate(90deg);
+  -webkit-transform: translateX(49px) translateY(-130%) rotate(90deg);
 `
 
 const triangleRightStyle = `
   top: 0;
   left: 25%;
-  transform: translateX(-35px) translateY(-150%) rotate(270deg);
+  transform: translateX(calc(-100% - 49px)) translateY(-140%) rotate(270deg);
+  -webkit-transform: translateX(calc(-100% - 49px)) translateY(-140%) rotate(270deg);
 `
 
 export const Wrapper = styled.span`
