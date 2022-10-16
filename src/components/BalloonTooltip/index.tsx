@@ -33,7 +33,9 @@ const BalloonTooltip: FC<IBalloonTooltip> = ({
       {isHover && (
         <>
           <Triangle position={position} />
-          <Description position={position}>{description}</Description>
+          <Description role="tooltip" position={position}>
+            {description}
+          </Description>
         </>
       )}
     </Wrapper>

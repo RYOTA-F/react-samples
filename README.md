@@ -36,6 +36,14 @@ $ yarn start
 
 ## Test
 
+### Jest Watch Component
+
+```
+$ jest --watch --findRelatedTests src/components/{component_name}/index.test.tsx
+```
+
+### Jest All
+
 ```sh
 $ yarn test
 ```
