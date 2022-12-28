@@ -30,6 +30,7 @@ import ReactHookForm from '../pages/reactHookForm'
 import ReactSyntaxHighlighter from '../pages/reactSyntaxHighlighter'
 import OnetimePassword from '../pages/onetimePassword'
 import BalloonTooltip from '../pages/balloonTooltip'
+import SelectField from '../pages/selectField'
 import MyPage from '../pages/myPage'
 import SignIn from '../pages/signIn'
 import SignOut from '../pages/signOut'
@@ -62,6 +63,7 @@ const Router: FC = () => {
           <Route path={LIBRARY_PAGES.SYNTAX_HIGHLIGHTER.url} element={<ReactSyntaxHighlighter />} />
           <Route path={CUSTOM_COMPONENT_PAGES.ONETIME_PASSWORD.url} element={<OnetimePassword />} />
           <Route path={CUSTOM_COMPONENT_PAGES.BALLOON_TOOLTIP.url} element={<BalloonTooltip />} />
+          <Route path={CUSTOM_COMPONENT_PAGES.SELECT_FIELD.url} element={<SelectField />} />
           {/* Public */}
 
           {/* Guest */}

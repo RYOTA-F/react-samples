@@ -27,6 +27,7 @@ export const LIBRARY_PAGES = {
 export const CUSTOM_COMPONENT_PAGES = {
   ONETIME_PASSWORD: { url: '/onetime_password', title: 'onetimePassword' },
   BALLOON_TOOLTIP: { url: '/balloon_tooltip', title: 'balloonTooltip' },
+  SELECT_FIELD: { url: '/select_field', title: 'selectField' },
 }
 
 export const AUTH_PAGES = {
